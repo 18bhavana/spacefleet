@@ -1,10 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Coming Soon</title>
+<title>SPACEFLEET.IN — Coming Soon</title>
 
 <style>
 * {
@@ -21,8 +22,9 @@ body {
 
 body {
     overflow: hidden;
-    background: #01030b;
+    background: #02050c;
     color: #fff;
+
     font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -43,20 +45,20 @@ body {
 
     background:
         radial-gradient(
-            circle at 50% 42%,
-            rgba(35, 65, 150, .18),
+            circle at 50% 45%,
+            rgba(20, 100, 180, .15),
             transparent 35%
         ),
         radial-gradient(
-            circle at 85% 15%,
-            rgba(100, 45, 190, .12),
+            circle at 80% 20%,
+            rgba(30, 180, 220, .08),
             transparent 30%
         ),
         linear-gradient(
             180deg,
-            #01030b 0%,
-            #020719 55%,
-            #01030b 100%
+            #01030a 0%,
+            #03101c 55%,
+            #01040a 100%
         );
 }
 
@@ -74,15 +76,23 @@ body {
 
 .stars {
     background-image:
-        radial-gradient(circle, #fff 1px, transparent 1.5px),
-        radial-gradient(circle, rgba(255,255,255,.7) 1px, transparent 1.5px);
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.95) 1px,
+            transparent 1.5px
+        ),
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.55) 1px,
+            transparent 1.5px
+        );
 
     background-size:
-        170px 170px,
-        260px 260px;
+        150px 150px,
+        270px 270px;
 
     background-position:
-        10px 20px,
+        20px 30px,
         100px 80px;
 
     opacity: .65;
@@ -90,66 +100,123 @@ body {
 
 .stars2 {
     background-image:
-        radial-gradient(circle, #fff 1.2px, transparent 2px),
-        radial-gradient(circle, rgba(100,180,255,.8) 1px, transparent 2px);
+        radial-gradient(
+            circle,
+            rgba(100,200,255,.9) 1px,
+            transparent 2px
+        );
 
-    background-size:
-        330px 330px,
-        420px 420px;
-
-    background-position:
-        40px 120px,
-        200px 50px;
+    background-size: 330px 330px;
+    background-position: 80px 120px;
 
     opacity: .45;
 }
 
 .stars3 {
     background-image:
-        radial-gradient(circle, white 1.5px, transparent 2px);
+        radial-gradient(
+            circle,
+            #fff 1.5px,
+            transparent 2px
+        );
 
     background-size: 520px 520px;
-    background-position: 80px 200px;
+    background-position: 160px 90px;
 
     opacity: .3;
 }
 
 /* =====================================================
-   NEBULA
+   BLUE NEBULA
 ===================================================== */
 
 .nebula {
     position: absolute;
 
-    width: 900px;
+    width: 1000px;
     height: 600px;
 
     left: 50%;
-    top: 10%;
+    top: 5%;
 
     transform: translateX(-50%);
 
     background:
         radial-gradient(
             ellipse,
-            rgba(70, 100, 255, .14),
-            rgba(130, 50, 220, .06) 35%,
-            transparent 70%
+            rgba(0,160,255,.13),
+            rgba(0,70,160,.06) 40%,
+            transparent 72%
         );
 
-    filter: blur(45px);
+    filter: blur(50px);
 
-    animation: nebulaMove 12s ease-in-out infinite alternate;
+    animation:
+        nebulaMove 14s ease-in-out infinite alternate;
 }
 
 @keyframes nebulaMove {
+
     from {
-        transform: translateX(-50%) scale(1);
+        transform:
+            translateX(-50%)
+            scale(1);
     }
 
     to {
-        transform: translateX(-50%) scale(1.12);
+        transform:
+            translateX(-50%)
+            scale(1.12);
     }
+}
+
+/* =====================================================
+   PLANET
+===================================================== */
+
+.planet {
+    position: absolute;
+
+    width: 110px;
+    height: 110px;
+
+    left: 9%;
+    top: 15%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 30% 28%,
+            #bde7ff,
+            #4384b9 35%,
+            #143d63 65%,
+            #031322
+        );
+
+    box-shadow:
+        inset -20px -18px 35px rgba(0,0,0,.65),
+        0 0 35px rgba(40,170,255,.18);
+}
+
+.planet::after {
+    content: "";
+
+    position: absolute;
+
+    width: 165px;
+    height: 38px;
+
+    left: -27px;
+    top: 36px;
+
+    border:
+        1px solid
+        rgba(100,200,255,.35);
+
+    border-radius: 50%;
+
+    transform: rotate(-15deg);
 }
 
 /* =====================================================
@@ -159,233 +226,314 @@ body {
 .sun {
     position: absolute;
 
-    width: 125px;
-    height: 125px;
+    width: 90px;
+    height: 90px;
 
-    top: 10%;
     right: 12%;
+    top: 13%;
 
     border-radius: 50%;
 
     background:
         radial-gradient(
-            circle at 35% 35%,
-            #fff,
-            #ffe77a 20%,
-            #ffb52e 55%,
-            #ff641f 75%,
+            circle,
+            #fff 0%,
+            #baf1ff 22%,
+            #42d7ff 55%,
+            #0875ba 75%,
             transparent 76%
         );
 
     box-shadow:
-        0 0 30px #ffbd45,
-        0 0 80px rgba(255,170,40,.55),
-        0 0 160px rgba(255,110,30,.25);
-
-    animation: sunPulse 5s ease-in-out infinite;
-}
-
-@keyframes sunPulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.06);
-    }
+        0 0 30px rgba(50,220,255,.8),
+        0 0 80px rgba(20,160,255,.35);
 }
 
 /* =====================================================
-   PLANET
+   SPACECRAFT
 ===================================================== */
 
-.planet-small {
-    position: absolute;
-
-    width: 95px;
-    height: 95px;
-
-    left: 9%;
-    top: 17%;
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle at 30% 30%,
-            #c3d8ff,
-            #5272c9 35%,
-            #18275d 70%,
-            #050a20
-        );
-
-    box-shadow:
-        inset -20px -15px 30px rgba(0,0,0,.6),
-        0 0 30px rgba(80,120,255,.25);
-}
-
-.planet-small::after {
-    content: "";
-
+.ship {
     position: absolute;
 
     width: 150px;
-    height: 38px;
+    height: 90px;
 
-    left: -28px;
-    top: 30px;
-
-    border: 2px solid rgba(150,180,255,.35);
-
-    border-radius: 50%;
-
-    transform: rotate(-18deg);
-}
-
-/* =====================================================
-   SATELLITE
-===================================================== */
-
-.satellite {
-    position: absolute;
-
-    width: 100px;
-    height: 70px;
-
-    right: 17%;
+    right: 14%;
     top: 34%;
 
-    transform: rotate(-12deg);
+    transform: rotate(-8deg);
 
-    animation: satelliteFloat 8s ease-in-out infinite;
+    animation:
+        shipFloat 8s ease-in-out infinite;
 }
 
-@keyframes satelliteFloat {
-    0%, 100% {
-        transform: translate(0,0) rotate(-12deg);
+@keyframes shipFloat {
+
+    0%,100% {
+        transform:
+            translate(0,0)
+            rotate(-8deg);
     }
 
     50% {
-        transform: translate(-35px,18px) rotate(-5deg);
+        transform:
+            translate(-35px,15px)
+            rotate(-4deg);
     }
 }
 
-.satellite-body {
+/* Main spacecraft body */
+
+.ship-body {
     position: absolute;
 
-    width: 42px;
-    height: 32px;
+    width: 72px;
+    height: 35px;
 
-    left: 29px;
-    top: 18px;
+    left: 40px;
+    top: 25px;
 
     background:
         linear-gradient(
             135deg,
-            #e5ebf5,
-            #68758b
+            #dfeaf3,
+            #667b8c
         );
 
-    border-radius: 4px;
+    clip-path:
+        polygon(
+            0 50%,
+            18% 10%,
+            75% 10%,
+            100% 50%,
+            75% 90%,
+            18% 90%
+        );
+
+    box-shadow:
+        0 0 15px rgba(80,210,255,.25);
 }
 
-.satellite-body::before {
-    content: "";
+/* Cockpit */
 
+.cockpit {
     position: absolute;
 
-    width: 24px;
-    height: 24px;
+    width: 25px;
+    height: 18px;
 
-    right: -15px;
-    top: 4px;
-
-    border: 2px solid #cfd9e8;
-
-    border-radius: 50%;
-}
-
-.satellite-body::after {
-    content: "";
-
-    position: absolute;
-
-    width: 20px;
-    height: 2px;
-
-    right: -27px;
-    top: 15px;
-
-    background: #cfd9e8;
-
-    transform: rotate(-15deg);
-}
-
-.panel {
-    position: absolute;
-
-    width: 27px;
-    height: 42px;
-
-    top: 13px;
+    left: 82px;
+    top: 33px;
 
     background:
-        repeating-linear-gradient(
-            90deg,
-            #172e68 0px,
-            #172e68 5px,
-            #5d82d4 6px,
-            #172e68 7px
+        linear-gradient(
+            135deg,
+            #baf5ff,
+            #187ea5
         );
 
-    border: 1px solid #809bd8;
+    clip-path:
+        polygon(
+            0 50%,
+            30% 0,
+            100% 20%,
+            100% 80%,
+            30% 100%
+        );
+
+    box-shadow:
+        0 0 12px rgba(80,220,255,.8);
 }
 
-.panel.left {
-    left: 0;
+/* Engine */
+
+.engine {
+    position: absolute;
+
+    width: 25px;
+    height: 8px;
+
+    left: 18px;
+    top: 41px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #44dfff
+        );
+
+    filter: blur(2px);
+
+    box-shadow:
+        0 0 15px #27dfff;
 }
 
-.panel.right {
-    right: 0;
+/* Wings */
+
+.wing {
+    position: absolute;
+
+    width: 45px;
+    height: 12px;
+
+    background: #4c6374;
+}
+
+.wing.top {
+    left: 42px;
+    top: 17px;
+
+    transform: skewX(-35deg);
+}
+
+.wing.bottom {
+    left: 42px;
+    top: 56px;
+
+    transform: skewX(35deg);
 }
 
 /* =====================================================
-   ORBIT
+   ORBITAL LINES
 ===================================================== */
 
 .orbit {
     position: absolute;
 
-    width: 520px;
-    height: 170px;
+    width: 650px;
+    height: 210px;
 
     left: 50%;
-    top: 50%;
+    top: 49%;
 
     transform:
         translate(-50%, -50%)
-        rotate(-15deg);
+        rotate(-12deg);
 
-    border: 1px solid rgba(120,160,255,.12);
+    border:
+        1px solid
+        rgba(70,190,255,.13);
 
     border-radius: 50%;
 }
 
+.orbit-two {
+    position: absolute;
+
+    width: 820px;
+    height: 300px;
+
+    left: 50%;
+    top: 49%;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(17deg);
+
+    border:
+        1px solid
+        rgba(70,150,255,.07);
+
+    border-radius: 50%;
+}
+
+/* Orbiting dot */
+
 .orbit-dot {
     position: absolute;
 
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
 
-    right: 8%;
+    right: 7%;
     top: 12%;
 
     border-radius: 50%;
 
-    background: #7ee7ff;
+    background: #56e4ff;
 
     box-shadow:
-        0 0 15px #7ee7ff;
+        0 0 18px #56e4ff;
+}
+
+/* =====================================================
+   RADAR
+===================================================== */
+
+.radar {
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    left: 7%;
+    bottom: 18%;
+
+    border:
+        1px solid
+        rgba(70,190,255,.15);
+
+    border-radius: 50%;
+
+    opacity: .5;
+}
+
+.radar::before,
+.radar::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border:
+        1px solid
+        rgba(70,190,255,.1);
+
+    border-radius: 50%;
+}
+
+.radar::before {
+    width: 80px;
+    height: 80px;
+}
+
+.radar::after {
+    width: 35px;
+    height: 35px;
+}
+
+.radar-line {
+    position: absolute;
+
+    width: 1px;
+    height: 50%;
+
+    left: 50%;
+    top: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #50dcff,
+            transparent
+        );
+
+    transform-origin: bottom;
+
+    animation:
+        radarSpin 4s linear infinite;
+}
+
+@keyframes radarSpin {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* =====================================================
@@ -395,31 +543,33 @@ body {
 .shooting-star {
     position: absolute;
 
-    width: 140px;
+    width: 150px;
     height: 2px;
 
     background:
         linear-gradient(
             90deg,
             transparent,
-            rgba(255,255,255,.95)
+            #fff
         );
 
     transform: rotate(-35deg);
 
     opacity: 0;
 
-    animation: shootingStar 8s linear infinite;
+    animation:
+        shootingStar 8s linear infinite;
 }
 
 .shooting-star.one {
-    top: 15%;
+    top: 18%;
     left: -10%;
 }
 
 .shooting-star.two {
-    top: 38%;
-    left: 45%;
+    top: 43%;
+    left: 42%;
+
     animation-delay: 4s;
 }
 
@@ -456,8 +606,9 @@ body {
 
 .content {
     position: relative;
-    z-index: 20;
+    z-index: 30;
 
+    width: 100%;
     height: 100vh;
 
     display: flex;
@@ -471,56 +622,106 @@ body {
     padding:
         30px
         20px
-        145px;
+        150px;
 }
 
-/* Label */
+/* Brand */
 
-.label {
-    display: flex;
+.brand {
+    font-size: clamp(27px, 4vw, 46px);
+
+    font-weight: 700;
+
+    letter-spacing: 9px;
+
+    margin-bottom: 30px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #5fe1ff,
+            #ffffff
+        );
+
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    animation:
+        brandShine 5s linear infinite;
+}
+
+@keyframes brandShine {
+
+    to {
+        background-position:
+            200% center;
+    }
+}
+
+/* Mission status */
+
+.status {
+    display: inline-flex;
+
     align-items: center;
 
-    gap: 20px;
+    gap: 9px;
 
-    color: #9eaccb;
+    padding:
+        7px
+        14px;
 
-    font-size: 13px;
+    border:
+        1px solid
+        rgba(70,200,255,.2);
 
-    letter-spacing: 7px;
+    border-radius: 30px;
+
+    color: #7edfff;
+
+    background:
+        rgba(20,100,150,.08);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
 
     text-transform: uppercase;
 
-    margin-bottom: 32px;
+    margin-bottom: 28px;
 }
 
-.label::before,
-.label::after {
-    content: "";
+.status-dot {
+    width: 6px;
+    height: 6px;
 
-    width: 45px;
-    height: 1px;
+    border-radius: 50%;
 
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            #7895dc
-        );
+    background: #4ce5ff;
+
+    box-shadow:
+        0 0 10px #4ce5ff;
+
+    animation:
+        statusPulse 2s infinite;
 }
 
-.label::after {
-    background:
-        linear-gradient(
-            90deg,
-            #7895dc,
-            transparent
-        );
+@keyframes statusPulse {
+
+    50% {
+        opacity: .35;
+    }
 }
 
 /* Heading */
 
 h1 {
-    font-size: clamp(55px, 10vw, 125px);
+    font-size: clamp(55px, 10vw, 120px);
 
     line-height: .9;
 
@@ -528,20 +729,20 @@ h1 {
 
     font-weight: 700;
 
-    margin-bottom: 32px;
+    margin-bottom: 30px;
 }
 
 .white {
-    color: white;
+    color: #fff;
 }
 
 .gradient {
     background:
         linear-gradient(
             90deg,
-            #65e6ff,
-            #668aff,
-            #955eff
+            #62e6ff,
+            #4ba8ff,
+            #7e72ff
         );
 
     -webkit-background-clip: text;
@@ -553,33 +754,31 @@ h1 {
 /* Description */
 
 .description {
-    color: #b0bad0;
+    max-width: 680px;
 
-    font-size: 17px;
+    color: #aab9ca;
+
+    font-size: 16px;
 
     line-height: 1.8;
 
-    letter-spacing: 1px;
+    letter-spacing: .8px;
 
-    margin-bottom: 28px;
+    margin-bottom: 23px;
 }
 
-/* =====================================================
-   COLLABORATION MESSAGE
-===================================================== */
+/* Collaboration */
 
 .interest {
-    color: #7f8da8;
+    color: #718196;
 
     font-size: 13px;
 
-    letter-spacing: .5px;
-
-    margin-bottom: 18px;
+    margin-bottom: 17px;
 }
 
 .interest strong {
-    color: #c5d1e8;
+    color: #c8d6e6;
 
     font-weight: 500;
 }
@@ -593,16 +792,20 @@ h1 {
 
     gap: 11px;
 
-    padding: 13px 28px;
+    padding:
+        13px
+        28px;
+
+    border:
+        1px solid
+        rgba(80,200,255,.4);
 
     border-radius: 50px;
 
-    border: 1px solid rgba(150,180,255,.45);
-
     background:
-        rgba(10,20,50,.35);
+        rgba(10,40,60,.35);
 
-    color: #dce5ff;
+    color: #d9f4ff;
 
     text-decoration: none;
 
@@ -616,10 +819,18 @@ h1 {
 .contact:hover {
     transform: translateY(-3px);
 
-    border-color: #91b0ff;
+    border-color:
+        rgba(80,220,255,.9);
 
     box-shadow:
-        0 0 30px rgba(70,130,255,.3);
+        0 0 30px
+        rgba(40,190,255,.25);
+}
+
+.contact-icon {
+    color: #55e5ff;
+
+    font-size: 17px;
 }
 
 /* =====================================================
@@ -642,18 +853,21 @@ h1 {
     background:
         radial-gradient(
             ellipse at 50% 0%,
-            rgba(60,120,210,.6),
-            rgba(15,35,85,.55) 30%,
-            #01030a 70%
+            rgba(20,130,200,.55),
+            rgba(5,45,80,.55) 30%,
+            #01040a 70%
         );
 
     border-top:
         2px solid
-        rgba(120,190,255,.9);
+        rgba(70,210,255,.85);
 
     box-shadow:
-        0 -8px 30px rgba(70,150,255,.75),
-        0 -20px 80px rgba(50,100,255,.25);
+        0 -8px 30px
+        rgba(30,190,255,.7),
+
+        0 -20px 80px
+        rgba(20,120,255,.25);
 }
 
 .earth::before {
@@ -662,15 +876,15 @@ h1 {
     position: absolute;
 
     width: 400px;
-    height: 80px;
+    height: 75px;
 
     left: 50%;
-    top: -30px;
+    top: -28px;
 
     transform: translateX(-50%);
 
     background:
-        rgba(100,190,255,.8);
+        rgba(70,210,255,.7);
 
     filter: blur(35px);
 
@@ -682,21 +896,22 @@ h1 {
 
     position: absolute;
 
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
 
     left: 50%;
     top: -5px;
 
     transform: translateX(-50%);
 
-    background: white;
+    background: #fff;
 
     border-radius: 50%;
 
     box-shadow:
-        0 0 15px 5px white,
-        0 0 40px 15px rgba(80,160,255,.8);
+        0 0 15px 5px #fff,
+        0 0 40px 15px
+        rgba(60,200,255,.8);
 }
 
 /* =====================================================
@@ -705,61 +920,85 @@ h1 {
 
 @media (max-width: 600px) {
 
+    .planet {
+        width: 55px;
+        height: 55px;
+
+        left: 5%;
+        top: 18%;
+    }
+
+    .planet::after {
+        width: 85px;
+        height: 23px;
+
+        left: -15px;
+        top: 16px;
+    }
+
     .sun {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
 
         right: 7%;
         top: 9%;
     }
 
-    .planet-small {
-        width: 55px;
-        height: 55px;
+    .ship {
+        right: 4%;
+        top: 29%;
 
-        left: 6%;
-        top: 19%;
-    }
-
-    .planet-small::after {
-        width: 85px;
-        height: 25px;
-
-        left: -15px;
-        top: 15px;
-    }
-
-    .satellite {
-        right: 5%;
-        top: 30%;
-
-        transform: scale(.7);
+        transform: scale(.65);
     }
 
     .orbit {
-        width: 320px;
-        height: 110px;
+        width: 330px;
+        height: 115px;
     }
 
-    .label {
-        font-size: 10px;
-        letter-spacing: 4px;
-        gap: 10px;
+    .orbit-two {
+        width: 420px;
+        height: 160px;
     }
 
-    .label::before,
-    .label::after {
+    .radar {
+        width: 80px;
+        height: 80px;
+
+        left: 5%;
+        bottom: 20%;
+    }
+
+    .radar::before {
+        width: 50px;
+        height: 50px;
+    }
+
+    .radar::after {
         width: 22px;
+        height: 22px;
+    }
+
+    .brand {
+        font-size: 26px;
+        letter-spacing: 6px;
+    }
+
+    .status {
+        font-size: 8px;
+        letter-spacing: 2px;
     }
 
     h1 {
-        font-size: 62px;
+        font-size: 60px;
         letter-spacing: -3px;
     }
 
     .description {
         font-size: 14px;
         line-height: 1.7;
+
+        max-width: 340px;
     }
 
     .interest {
@@ -767,7 +1006,9 @@ h1 {
     }
 
     .contact {
-        padding: 12px 23px;
+        padding:
+            12px
+            23px;
     }
 
     .earth {
@@ -783,7 +1024,7 @@ h1 {
 
 <div class="space">
 
-    <!-- Background -->
+    <!-- Stars -->
     <div class="stars"></div>
     <div class="stars2"></div>
     <div class="stars3"></div>
@@ -791,35 +1032,56 @@ h1 {
     <!-- Nebula -->
     <div class="nebula"></div>
 
+    <!-- Planet -->
+    <div class="planet"></div>
+
     <!-- Sun -->
     <div class="sun"></div>
 
-    <!-- Planet -->
-    <div class="planet-small"></div>
+    <!-- Spacecraft -->
+    <div class="ship">
 
-    <!-- Satellite -->
-    <div class="satellite">
-        <div class="panel left"></div>
-        <div class="satellite-body"></div>
-        <div class="panel right"></div>
+        <div class="solar-panel left"></div>
+
+        <div class="ship-body"></div>
+
+        <div class="cockpit"></div>
+
+        <div class="engine"></div>
+
+        <div class="wing top"></div>
+        <div class="wing bottom"></div>
+
+        <div class="solar-panel right"></div>
+
     </div>
 
-    <!-- Orbit -->
+    <!-- Orbits -->
     <div class="orbit">
         <div class="orbit-dot"></div>
     </div>
 
-    <!-- Shooting stars -->
+    <div class="orbit-two"></div>
+
+    <!-- Radar -->
+    <div class="radar">
+        <div class="radar-line"></div>
+    </div>
+
+    <!-- Shooting Stars -->
     <div class="shooting-star one"></div>
     <div class="shooting-star two"></div>
 
-    <!-- Main content -->
+    <!-- Main Content -->
     <main class="content">
 
-        <div class="label">
-            <span></span>
-            Something New
-            <span></span>
+        <div class="brand">
+            SPACEFLEET.IN
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            Mission Preparing
         </div>
 
         <h1>
@@ -828,29 +1090,30 @@ h1 {
         </h1>
 
         <p class="description">
-            We're working on something exciting.<br>
-            Something new is taking shape.<br>
-            Stay tuned for the journey.
+            The next destination is being prepared.<br>
+            Something new is entering orbit.
         </p>
 
         <p class="interest">
-            <strong>Have an idea for this space?</strong>
-            Let's create something remarkable together.
+            <strong>Have an idea for SPACEFLEET?</strong>
+            Let's build something remarkable together.
         </p>
 
         <a
             class="contact"
-            href="mailto:enquries@novvan.us?subject=Interested in this opportunity"
+            href="mailto:traju.r99@gmail.com?subject=SPACEFLEET.IN%20Collaboration"
         >
-            ✦ &nbsp; Let's collaborate
+            <span class="contact-icon">✦</span>
+            Let's collaborate
         </a>
 
     </main>
 
-    <!-- Earth horizon -->
+    <!-- Earth -->
     <div class="earth"></div>
 
 </div>
 
 </body>
 </html>
+```
