@@ -1,2 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://YOUR-DOMAIN-HERE/</loc></url><url><loc>https://YOUR-DOMAIN-HERE/satellites.html</loc></url><url><loc>https://YOUR-DOMAIN-HERE/iss.html</loc></url><url><loc>https://YOUR-DOMAIN-HERE/space-weather.html</loc></url><url><loc>https://YOUR-DOMAIN-HERE/missions.html</loc></url><url><loc>https://YOUR-DOMAIN-HERE/news.html</loc></url><url><loc>https://YOUR-DOMAIN-HERE/about.html</loc></url><url><loc>https://YOUR-DOMAIN-HERE/privacy.html</loc></url><url><loc>https://YOUR-DOMAIN-HERE/terms.html</loc></url><url><loc>https://YOUR-DOMAIN-HERE/disclaimer.html</loc></url>  <url><loc>https://spacefleet.in/contact.html</loc></url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://spacefleet.in/</loc></url>
+  <url><loc>https://spacefleet.in/satellites.html</loc></url>
+  <url><loc>https://spacefleet.in/iss.html</loc></url>
+  <url><loc>https://spacefleet.in/space-weather.html</loc></url>
+  <url><loc>https://spacefleet.in/missions.html</loc></url>
+  <url><loc>https://spacefleet.in/news.html</loc></url>
+  <url><loc>https://spacefleet.in/guides.html</loc></url>
+  <url><loc>https://spacefleet.in/guide-satellite-orbits.html</loc></url>
+  <url><loc>https://spacefleet.in/guide-tle-data.html</loc></url>
+  <url><loc>https://spacefleet.in/guide-iss-viewing.html</loc></url>
+  <url><loc>https://spacefleet.in/guide-space-weather.html</loc></url>
+  <url><loc>https://spacefleet.in/guide-mission-phases.html</loc></url>
+  <url><loc>https://spacefleet.in/guide-space-news.html</loc></url>
+  <url><loc>https://spacefleet.in/about.html</loc></url>
+  <url><loc>https://spacefleet.in/contact.html</loc></url>
+  <url><loc>https://spacefleet.in/privacy.html</loc></url>
+  <url><loc>https://spacefleet.in/terms.html</loc></url>
+  <url><loc>https://spacefleet.in/disclaimer.html</loc></url>
 </urlset>
